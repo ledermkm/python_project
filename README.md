@@ -155,20 +155,26 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
 ---
 
 <br/>
+<br/>
 
 ## Testing
 
-### General  
-**Errors:**  
--[x] Call script with no command  
-*Input*:  
+<br/>
+
+### General
+<br/>
+**Errors:**
+<br/>
+-[x] Call script with no command
+<br/>
+*Input*:
 ```python
 python python_proj.py
 ```
 
 <br/>
 
-*Result*:  
+*Result*:
 ```python
 python_proj.py: error: the following arguments are required: <command>
 ```
@@ -176,7 +182,8 @@ python_proj.py: error: the following arguments are required: <command>
 <br/>
 <br/>
 
--[x] Call script with no command and invalid option  
+-[x] Call script with no command and invalid option
+<br/>
 *Input*:  
 ```python
 python python_proj.py -f
@@ -192,8 +199,10 @@ python_proj.py: error: the following arguments are required: <command>
 <br/>
 <br/>
 
-**Valid:**  
--[x] Call script with --help or -h  
+**Valid:**
+<br/>
+-[x] Call script with --help or -h
+<br/>
 *Input*:  
 ```python
 python python_proj.py -h
@@ -222,9 +231,12 @@ removeTask         Delete a task and its information
 <br/>
 <br/>
 
-### Select All  
-**Errors:**  
--[x] selectAll command with no options or arguments  
+### Select All
+<br/>
+**Errors:**
+<br/>
+-[x] selectAll command with no options or arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py selectAll
@@ -241,7 +253,8 @@ python_proj.py selectAll: error: the following arguments are required: --databas
 <br/>
 <br/>
 
--[x] selectAll command with --database argument but no --table argument  
+-[x] selectAll command with --database argument but no --table argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py selectAll --database database
@@ -258,7 +271,8 @@ python_proj.py selectAll: error: the following arguments are required: --table
 <br/>
 <br/>
 
--[x] selectAll command with --table argument but no --database argument  
+-[x] selectAll command with --table argument but no --database argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py selectAll --table tasks
@@ -275,8 +289,10 @@ python_proj.py selectAll: error: the following arguments are required: --databas
 <br/>
 <br/>
 
-**Valid:**  
--[x] selectAll command with -h or --help  
+**Valid:**
+<br/>
+-[x] selectAll command with -h or --help
+<br/>
 *Input:*  
 ```python
 python python_proj.py selectAll -h
@@ -297,7 +313,8 @@ options:
 <br/>
 <br/>
 
--[x] selectAll command with database that doesn't exist yet  
+-[x] selectAll command with database that doesn't exist yet
+<br/>
 *Input:*  
 ```python
 python python_proj.py selectAll --database database10 --table tasks
@@ -318,7 +335,8 @@ All tasks from database:
 <br/>
 <br/>
 
--[x] selectAll command with table that doesn't exist yet but the database does  
+-[x] selectAll command with table that doesn't exist yet but the database does
+<br/>
 *Input:*  
 ```python
 python python_proj.py selectAll --database database --table tasks2
@@ -340,6 +358,7 @@ All tasks from database:
 <br/>
 
 -[x] selectAll command
+<br/>
 *Input:*  
 ```python
 python python_proj.py selectAll --database database --table tasks
@@ -357,9 +376,12 @@ All tasks from database:
 <br/>
 <br/>
 
-### Create Task  
-**Errors:**  
--[x] createTask command with no options or arguments  
+### Create Task
+<br/>
+**Errors:**
+<br/>
+-[x] createTask command with no options or arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask
@@ -377,7 +399,8 @@ python_proj.py createTask: error: the following arguments are required: --databa
 <br/>
 <br/>
 
--[x] createTask command with missing argument  
+-[x] createTask command with missing argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database --table tasks --description "Make dinner" --status "In Progress" --dueDate "04/05/2025"
@@ -395,7 +418,8 @@ python_proj.py createTask: error: the following arguments are required: --taskNa
 <br/>
 <br/>
 
--[x] createTask command with invalid date format  
+-[x] createTask command with invalid date format
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database --table tasks --taskName "Make dinner" --description "Make dinner" --status "In Progress" --dueDate "0403"
@@ -412,7 +436,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] createTask command if task name already exists  
+-[x] createTask command if task name already exists
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database --table tasks --taskName "Make dinner" --description "Make dinner" --status "In Progress" --dueDate "04/06/2025"
@@ -429,8 +454,10 @@ Exiting...
 <br/>
 <br/>
 
-**Valid:**  
--[x] createTask command with -h or --help  
+**Valid:**
+<br/>
+-[x] createTask command with -h or --help
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask -h
@@ -457,7 +484,8 @@ The status of the task
 <br/>
 <br/>
 
--[x] createTask command with database that doesn't exist yet  
+-[x] createTask command with database that doesn't exist yet
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database10 --table tasks --taskName "Make dinner" --description "Make dinner" --status "In Progress" --dueDate "04/06/2025"
@@ -475,7 +503,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] createTask command with table that doesn't exist yet but the database does  
+-[x] createTask command with table that doesn't exist yet but the database does
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database --table tasks2 --taskName "Make dinner" --description "Make dinner" --status "In Progress" --dueDate "04/06/2025"
@@ -495,7 +524,8 @@ Task created.
 <br/>
 <br/>
 
--[x] createTask command with missing dueDate argument (not required -- valid input)  
+-[x] createTask command with missing dueDate argument (not required -- valid input)
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database --table tasks --taskName "Make dinner" --description "Make dinner" --status "In Progress"
@@ -512,7 +542,8 @@ Task created.
 <br/>
 <br/>
 
--[x] createTask command with all arguments  
+-[x] createTask command with all arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database --table tasks --taskName "Make dinner" --description "Make dinner" --status "In Progress" --dueDate "04/06/2025"
@@ -529,9 +560,12 @@ Task created.
 <br/>
 <br/>
 
-### Update Task Name  
-**Errors:**  
--[x] updateTaskName command with no options or arguments  
+### Update Task Name
+<br/>
+**Errors:**
+<br/>
+-[x] updateTaskName command with no options or arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateTaskName
@@ -548,7 +582,8 @@ python_proj.py updateTaskName: error: the following arguments are required: --da
 <br/>
 <br/>
 
--[x] updateTaskName command with missing argument  
+-[x] updateTaskName command with missing argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateTaskName --database database --table tasks
@@ -565,7 +600,8 @@ python_proj.py updateTaskName: error: the following arguments are required: --ta
 <br/>
 <br/>
 
--[x] updateTaskName command if task name already exists  
+-[x] updateTaskName command if task name already exists
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateTaskName --database database --table tasks --taskName "Walk dog" --taskID 1
@@ -582,8 +618,10 @@ Exiting...
 <br/>
 <br/>
 
-**Valid:**  
--[x] updateTaskName command with -h or --help  
+**Valid:**
+<br/>
+-[x] updateTaskName command with -h or --help
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateTaskName -h
@@ -606,7 +644,8 @@ options:
 <br/>
 <br/>
 
--[x] updateTaskName command with database that doesn't exist yet  
+-[x] updateTaskName command with database that doesn't exist yet
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateTaskName --database database2 --table tasks --taskName "Make dinner" --taskID 1
@@ -625,7 +664,8 @@ Database 'database2' and table 'tasks' created. Exiting without task update/crea
 <br/>
 <br/>
 
--[x] updateTaskName command with table that doesn't exist yet but the database does  
+-[x] updateTaskName command with table that doesn't exist yet but the database does
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateTaskName --database database --table tasks5 --taskName "Make dinner" --taskID 1
@@ -644,7 +684,8 @@ Table 'tasks5' created within database 'database'. Exiting without task update/c
 <br/>
 <br/>
 
--[x] updateTaskName command with all arguments  
+-[x] updateTaskName command with all arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateTaskName --database database --table tasks --taskName "Make dinner" --taskID 1
@@ -661,9 +702,12 @@ Task name updated.
 <br/>
 <br/>
 
-### Update Description  
-**Errors:**  
--[x] updateDescription command with no options or arguments  
+### Update Description
+<br/>
+**Errors:**
+<br/>
+-[x] updateDescription command with no options or arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDescription
@@ -680,7 +724,8 @@ python_proj.py updateDescription: error: the following arguments are required: -
 <br/>
 <br/>
 
--[x] updateDescription command with missing argument  
+-[x] updateDescription command with missing argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDescription --database database --table tasks
@@ -697,8 +742,10 @@ python_proj.py updateDescription: error: the following arguments are required: -
 <br/>
 <br/>
 
-**Valid:**  
--[x] updateDescription command with -h or --help  
+**Valid:**
+<br/>
+-[x] updateDescription command with -h or --help
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDescription -h
@@ -723,7 +770,8 @@ The description of the task; ensure this is in quotes
 <br/>
 <br/>
 
--[x] updateDescription command with database that doesn't exist yet  
+-[x] updateDescription command with database that doesn't exist yet
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDescription --database database2 --table tasks --taskName "Make dinner" --description "Need grocery list"
@@ -741,7 +789,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] updateDescription command with table that doesn't exist yet but the database does  
+-[x] updateDescription command with table that doesn't exist yet but the database does
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDescription --database database --table tasks6 --description "Need grocery list" --taskName "Make dinner"
@@ -759,7 +808,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] updateDescription command with all arguments  
+-[x] updateDescription command with all arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDescription --database database --table tasks --taskName "Make dinner" --description "Need grocery list"
@@ -776,9 +826,12 @@ Description updated.
 <br/>
 <br/>
 
-### Update Status  
-**Errors:**  
--[x] updateStatus command with no options or arguments  
+### Update Status
+<br/>
+**Errors:**
+<br/>
+-[x] updateStatus command with no options or arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateStatus
@@ -786,7 +839,7 @@ python python_proj.py updateStatus
 
 <br/>
 
-*Output:*  
+*Output:*
 ```python
 usage: python_proj.py updateStatus [-h] --database DATABASE --table TABLE --status {Complete,In Progress,On Hold,Not Started} [--taskID TASKID] [--taskName TASKNAME]
 python_proj.py updateStatus: error: the following arguments are required: --database, --table, --status
@@ -795,7 +848,8 @@ python_proj.py updateStatus: error: the following arguments are required: --data
 <br/>
 <br/>
 
--[x] updateStatus command with missing argument  
+-[x] updateStatus command with missing argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateStatus --database database --table tasks --taskName "Make dinner"
@@ -812,8 +866,10 @@ python_proj.py updateStatus: error: the following arguments are required: --stat
 <br/>
 <br/>
 
-**Valid:**  
--[x] updateStatus command with -h or --help  
+**Valid:**
+<br/>
+-[x] updateStatus command with -h or --help
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateStatus -h
@@ -838,7 +894,8 @@ The status of the task; ensure this is in quotes
 <br/>
 <br/>
 
--[x] updateStatus command with database that doesn't exist yet  
+-[x] updateStatus command with database that doesn't exist yet
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateStatus --database database2 --table tasks --taskName "Make dinner" --status "Complete"
@@ -856,7 +913,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] updateStatus command with table that doesn't exist yet but the database does  
+-[x] updateStatus command with table that doesn't exist yet but the database does
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateStatus --database database --table tasks6 --taskName "Make dinner" --status "Complete"
@@ -874,7 +932,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] updateStatus command with all arguments  
+-[x] updateStatus command with all arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateStatus --database database --table tasks --taskName "Make dinner" --status "Complete"
@@ -891,9 +950,12 @@ Status updated.
 <br/>
 <br/>
 
-### Update Due Date  
-**Errors:**  
--[x] updateDueDate command with no options or arguments  
+### Update Due Date
+<br/>
+**Errors:**
+<br/>
+-[x] updateDueDate command with no options or arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDueDate
@@ -910,7 +972,8 @@ python_proj.py updateDueDate: error: the following arguments are required: --dat
 <br/>
 <br/>
 
--[x] updateDueDate command with missing argument  
+-[x] updateDueDate command with missing argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDueDate --database database --table tasks --taskName "Make dinner"
@@ -927,7 +990,8 @@ python_proj.py updateDueDate: error: the following arguments are required: --due
 <br/>
 <br/>
 
--[x] updateDueDate command with invalid date format  
+-[x] updateDueDate command with invalid date format
+<br/>
 *Input:*  
 ```python
 python python_proj.py createTask --database database --table tasks --taskName "Make dinner" --dueDate "0403"
@@ -944,8 +1008,10 @@ Exiting...
 <br/>
 <br/>
 
-**Valid:**  
--[x] updateDueDate command with -h or --help  
+**Valid:**
+<br/>
+-[x] updateDueDate command with -h or --help
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDueDate -h
@@ -969,7 +1035,8 @@ options:
 <br/>
 <br/>
 
--[x] updateDueDate command with database that doesn't exist yet  
+-[x] updateDueDate command with database that doesn't exist yet
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDueDate --database database2 --table tasks --taskName "Make dinner" --dueDate "05/05/2025"
@@ -987,7 +1054,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] updateDueDate command with table that doesn't exist yet but the database does  
+-[x] updateDueDate command with table that doesn't exist yet but the database does
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDueDate --database database --table tasks6 --taskName "Make dinner" --dueDate "05/05/2025"
@@ -1005,7 +1073,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] updateDueDate command with all arguments  
+-[x] updateDueDate command with all arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py updateDueDate --database database --table tasks --taskName "Make dinner" --dueDate "05/05/2025"
@@ -1022,9 +1091,12 @@ Due date updated.
 <br/>
 <br/>
 
-### Delete Task  
-**Errors:**  
--[x] removeTask command with no options or arguments  
+### Delete Task
+<br/>
+**Errors:**
+<br/>
+-[x] removeTask command with no options or arguments
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask
@@ -1041,7 +1113,8 @@ python_proj.py removeTask: error: the following arguments are required: --databa
 <br/>
 <br/>
 
--[x] removeTask command with --database argument but no --table argument  
+-[x] removeTask command with --database argument but no --table argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask --database database
@@ -1058,7 +1131,8 @@ python_proj.py removeTask: error: the following arguments are required: --table
 <br/>
 <br/>
 
--[x] removeTask command with --table argument but no --database argument  
+-[x] removeTask command with --table argument but no --database argument
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask --table tasks
@@ -1075,7 +1149,8 @@ python_proj.py removeTask: error: the following arguments are required: --databa
 <br/>
 <br/>
 
--[x] removeTask command without either --taskID or --taskName  
+-[x] removeTask command without either --taskID or --taskName
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask --database database --table tasks
@@ -1092,8 +1167,10 @@ Exiting...
 <br/>
 <br/>
 
-**Valid:**  
--[x] removeTask command with -h or --help  
+**Valid:**
+<br/>
+-[x] removeTask command with -h or --help
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask -h
@@ -1116,7 +1193,8 @@ options:
 <br/>
 <br/>
 
--[x] removeTask command with database that doesn't exist yet  
+-[x] removeTask command with database that doesn't exist yet
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask --database database2 --table tasks --taskID 2
@@ -1134,7 +1212,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] removeTask command with table that doesn't exist yet but the database does  
+-[x] removeTask command with table that doesn't exist yet but the database does
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask --database database --table tasks6 --taskID 2
@@ -1152,7 +1231,8 @@ Exiting...
 <br/>
 <br/>
 
--[x] removeTask command  
+-[x] removeTask command
+<br/>
 *Input:*  
 ```python
 python python_proj.py removeTask --database database --table tasks --taskID 2
