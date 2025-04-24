@@ -164,22 +164,16 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
 
 ### General
 
-<br/>
-
 **Errors:**
-
-<br/>
 
 - [x] Call script with no command
 
-<br/>
-
-&nbsp;*Input*:
+&nbsp;&nbsp;&nbsp;*Input*:
 ```python
 python python_proj.py
 ```
 
-&nbsp;*Output*:
+&nbsp;&nbsp;&nbsp;*Output*:
 ```python
 python_proj.py: error: the following arguments are required: <command>
 ```
