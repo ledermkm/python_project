@@ -151,6 +151,7 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
 ```
 
 <br/>
+<br/>
 
 ---
 
@@ -162,10 +163,14 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
 <br/>
 
 ### General
+
 <br/>
+
 **Errors:**
+
 <br/>
--[x] Call script with no command
+
+- [x] Call script with no command
 <br/>
 *Input*:
 ```python
