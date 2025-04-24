@@ -60,7 +60,7 @@ python python_proj.py createTask --database <database> --table <table> --taskNam
 <br/>
 
 ### `updateTaskName`
-    Used to update the name of a task.
+Used to update the name of a task.
 
 **Command Usage:**
 ```python
@@ -78,7 +78,7 @@ python python_proj.py updateTaskName --database <database> --table <table> --tas
 <br/>
 
 ### `updateDescription`
-    Used to update the description of a task. NOTE: Either the --taskName option or --taskID option can be used, but ONE of the two is required.
+Used to update the description of a task. NOTE: Either the --taskName option or --taskID option can be used, but ONE of the two is required.
 
 **Command Usage:**
 ```python
