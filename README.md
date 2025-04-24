@@ -172,31 +172,24 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
 
 - [x] Call script with no command
 <br/>
-*Input*:
+&nbsp;*Input*:
 ```python
 python python_proj.py
 ```
-
-<br/>
-
-*Result*:
+&nbsp;*Output*:
 ```python
 python_proj.py: error: the following arguments are required: <command>
 ```
 
 <br/>
-<br/>
 
--[x] Call script with no command and invalid option
+- [x] Call script with no command and invalid option
 <br/>
-*Input*:  
+&nbsp;*Input*:  
 ```python
 python python_proj.py -f
 ```
-
-<br/>
-
-*Result*:  
+&nbsp;*Output*:  
 ```python
 python_proj.py: error: the following arguments are required: <command>
 ```
