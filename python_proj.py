@@ -68,11 +68,12 @@ def main():
     # PARSE ARGUMENTS
     args = parser.parse_args()
 
+    # CHECK FOR COMMAND
     if not args.command:
         parser.print_help()
         exit(1)
 
-    
+    # CHECK FOR MISSING ARGUMENT
     if args.command == "removeTask" or args.command == "updateDescription" or args.command == "updateStatus" or args.command == "updateDueDate":
         if not args.taskName and not args.taskID:
             print("Missing argument. Please provide --taskName or --taskID to remove task.")
