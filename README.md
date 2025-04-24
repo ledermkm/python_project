@@ -20,7 +20,7 @@ The script can create, update, delete, and retrieve tasks. If a specified databa
 ## Available Commands
 
 ### `selectAll`
-    Used to select and view all tasks within the table.
+Used to select and view all tasks within the table.
 
 **Command Usage:**
 ```python
@@ -34,7 +34,7 @@ python python_proj.py selectAll --database <database> --table <table>
 ```
 
 ### `createTask`
-    Used to create a task along with any appropriate characteristics (description, status, etc.). 
+Used to create a task along with any appropriate characteristics (description, status, etc.). 
 
 **Command Usage:**
 ```python
@@ -85,7 +85,7 @@ python python_proj.py updateDescription --database <database> --table <table> --
 ```
 
 ### `updateStatus`
-    Used to update the status of a task.
+Used to update the status of a task.
 
 **Command Usage:**
 ```python
@@ -102,7 +102,7 @@ python python_proj.py updateStatus --database <database> --table <table> --taskN
 ```
 
 ### `updateDueDate`
-    Used to update the due date of a task (i.e., when it should be completed by).
+Used to update the due date of a task (i.e., when it should be completed by).
 
 **Command Usage:**
 ```python
@@ -119,7 +119,7 @@ python python_proj.py updateDueDate --database <database> --table <table> --task
 ```
 
 ### `removeTask`
-    Used to delete a task from the list, including all of its characteristics.
+Used to delete a task from the list, including all of its characteristics.
 
 **Command Usage:**
 ```python
