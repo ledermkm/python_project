@@ -37,6 +37,8 @@ python python_proj.py selectAll --database <database> --table <table>
 --table: The table to be modified. REQUIRED.
 ```
 
+<br/>
+
 ### `createTask`
 Used to create a task along with any appropriate characteristics (description, status, etc.). 
 
@@ -55,6 +57,8 @@ python python_proj.py createTask --database <database> --table <table> --taskNam
 --dueDate: The date that the task should be completed by; must be in the format dd/mm/yyyy. OPTIONAL.
 ```
 
+<br/>
+
 ### `updateTaskName`
     Used to update the name of a task.
 
@@ -70,6 +74,8 @@ python python_proj.py updateTaskName --database <database> --table <table> --tas
 --taskName: The NEW name of the task. REQUIRED.
 --taskID: The ID number related to the task to be renamed. To view relevant ID, use selectAll command. REQUIRED.
 ```
+
+<br/>
 
 ### `updateDescription`
     Used to update the description of a task. NOTE: Either the --taskName option or --taskID option can be used, but ONE of the two is required.
@@ -88,6 +94,8 @@ python python_proj.py updateDescription --database <database> --table <table> --
 --description: The new description of the task. REQUIRED.
 ```
 
+<br/>
+
 ### `updateStatus`
 Used to update the status of a task.
 
@@ -104,6 +112,8 @@ python python_proj.py updateStatus --database <database> --table <table> --taskN
 --taskID: The ID number related to the task to be updated. REQUIRED if --taskName is not used.
 --status: The status of the task. REQUIRED and LIMITED CHOICES: "Complete", "In Progress", "On Hold", "Not Started"
 ```
+
+<br/>
 
 ### `updateDueDate`
 Used to update the due date of a task (i.e., when it should be completed by).
@@ -122,6 +132,8 @@ python python_proj.py updateDueDate --database <database> --table <table> --task
 --dueDate: The new due date of the task. Must be in dd/mm/yyyy format. REQUIRED.
 ```
 
+<br/>
+
 ### `removeTask`
 Used to delete a task from the list, including all of its characteristics.
 
@@ -138,7 +150,11 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
 --taskID: The ID number related to the task to be updated. REQUIRED if --taskName is not used.
 ```
 
+<br/>
+
 ---
+
+<br/>
 
 ## Testing
 
@@ -164,6 +180,8 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     python_proj.py: error: the following arguments are required: <command>
     ```
 
+<br/>
+
 **Valid:**
 -[x] Call script with --help or -h
   *Input*:
@@ -187,6 +205,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
       updateDueDate      Update the due date of a task
       removeTask         Delete a task and its information
     ```
+
+<br/>
+<br/>
 
 ### Select All
 **Errors:**
@@ -222,6 +243,8 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     usage: python_proj.py selectAll [-h] --database DATABASE --table TABLE
     python_proj.py selectAll: error: the following arguments are required: --database
     ```
+
+<br/>
 
 **Valid:**
 -[x] selectAll command with -h or --help
@@ -281,6 +304,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     [(1, 'Do dishes', 'Do dishes', 'Complete', '4/15/2025'), (2, 'Walk dog', 'Walk dog', 'Not Started', '4/15/2025')]
     ```
 
+<br/>
+<br/>
+
 ### Create Task
 **Errors:**
 -[x] createTask command with no options or arguments
@@ -327,6 +353,8 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     The task 'Make dinner' already exists. Please create a unique task.
     Exiting...
     ```
+
+<br/>
 
 **Valid:**
 -[x] createTask command with -h or --help
@@ -398,6 +426,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     Task created.
     ```
 
+<br/>
+<br/>
+
 ### Update Task Name
 **Errors:**
 -[x] updateTaskName command with no options or arguments
@@ -432,6 +463,8 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     The task 'Walk dog' already exists. Please create a unique task.
     Exiting...
     ```
+
+<br/>
 
 **Valid:**
 -[x] updateTaskName command with -h or --help
@@ -488,6 +521,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     Task name updated.
     ```
 
+<br/>
+<br/>
+
 ### Update Description
 **Errors:**
 -[x] updateDescription command with no options or arguments
@@ -511,6 +547,8 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     usage: python_proj.py updateDescription [-h] --database DATABASE --table TABLE --description DESCRIPTION [--taskID TASKID] [--taskName TASKNAME]
     python_proj.py updateDescription: error: the following arguments are required: --description
     ```
+
+<br/>
 
 **Valid:**
 -[x] updateDescription command with -h or --help
@@ -567,6 +605,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     Description updated.
     ```
 
+<br/>
+<br/>
+
 ### Update Status
 **Errors:**
 -[x] updateStatus command with no options or arguments
@@ -590,6 +631,8 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     usage: python_proj.py updateStatus [-h] --database DATABASE --table TABLE --status {Complete,In Progress,On Hold,Not Started} [--taskID TASKID] [--taskName TASKNAME]
     python_proj.py updateStatus: error: the following arguments are required: --status
     ```
+
+<br/>
 
 **Valid:**
 -[x] updateStatus command with -h or --help
@@ -644,6 +687,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     Status updated.
     ```
 
+<br/>
+<br/>
+
 ### Update Due Date
 **Errors:**
 -[x] updateDueDate command with no options or arguments
@@ -678,6 +724,8 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     Invalid date format. Please enter date in MM/DD/YYYY format
     Exiting...
     ```
+
+<br/>
 
 **Valid:**
 -[x] updateDueDate command with -h or --help
@@ -733,6 +781,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     Due date updated.
     ```
 
+<br/>
+<br/>
+
 ### Delete Task
 **Errors:**
 -[x] removeTask command with no options or arguments
@@ -778,6 +829,9 @@ python python_proj.py removeTask --database <database> --table <table> --taskNam
     Missing argument. Please provide --taskName or --taskID to remove task.
     Exiting...
     ```
+
+<br/>
+
 **Valid:**
 -[x] removeTask command with -h or --help
   *Input:*
