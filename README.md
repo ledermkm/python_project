@@ -14,9 +14,9 @@ The purpose for these scripts is to allow users to easily manage a database, whi
   - **Due Date** *(optional)*
 
 The script can create, update, delete, and retrieve tasks. If a specified database or table does not yet exist, it will prompt the user to create it (note: update actions won't execute after creation).
-
+<br/>
 ---
-
+<br/>
 ## Available Commands
 
 ### `selectAll`
